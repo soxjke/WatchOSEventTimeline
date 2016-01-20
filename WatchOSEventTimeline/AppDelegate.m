@@ -7,16 +7,14 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
-@end
+#import "CoreDataManager.h"
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Side effect for eager CoreDataManager initialization
+    [CoreDataManager sharedInstance];
     return YES;
 }
 

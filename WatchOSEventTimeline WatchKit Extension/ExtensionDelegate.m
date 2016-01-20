@@ -7,11 +7,12 @@
 //
 
 #import "ExtensionDelegate.h"
+#import "CoreDataManager.h"
 
 @implementation ExtensionDelegate
 
 - (void)applicationDidFinishLaunching {
-    // Perform any final initialization of your application.
+    [CoreDataManager sharedInstance];
 }
 
 - (void)applicationDidBecomeActive {
