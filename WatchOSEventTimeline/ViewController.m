@@ -48,7 +48,7 @@ NSString * const URLPattern = @"/store/connector/7400712a-7f34-4322-8184-e9e56be
     self.hud = [[SAMHUDView alloc] initWithTitle:@"Loading" loading:YES];    
     [self.hud show];
     [self.sessionManager GET:path parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        weakSelf.dataSource = [[CoreDataManager sharedInstance] parseAndStorePage:self.currentPage withObjects:responseObject[@"results"]];
+        weakSelf.dataSource = [[CoreDataManager sharedInstance] parseAndStorePage:weakSelf.currentPage withObjects:responseObject[@"results"]];
         [weakSelf updateNoLoad:YES];
         [weakSelf.hud completeAndDismissWithTitle:@"Success"];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

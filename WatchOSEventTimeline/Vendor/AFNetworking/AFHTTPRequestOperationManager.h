@@ -20,7 +20,9 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#if !TARGET_OS_WATCH
 #import <SystemConfiguration/SystemConfiguration.h>
+#endif
 #import <Availability.h>
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
@@ -151,7 +153,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The network reachability manager. `AFHTTPRequestOperationManager` uses the `sharedManager` by default.
  */
+#if !TARGET_OS_WATCH
 @property (readwrite, nonatomic, strong) AFNetworkReachabilityManager *reachabilityManager;
+#endif
+
 
 ///-------------------------------
 /// @name Managing Callback Queues

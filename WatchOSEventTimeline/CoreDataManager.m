@@ -14,6 +14,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (strong, nonatomic) NSMutableDictionary *dict;
+
 @end
 
 @implementation CoreDataManager
@@ -35,6 +37,7 @@
     self = [super init];
     if (self != nil) {
         [self managedObjectContext];
+        self.dict = [NSMutableDictionary new];
     }
     return self;
 }
@@ -155,7 +158,18 @@ static NSEntityDescription *eventEntityDescription = nil;
     components.year = 2016;
     components.day = [components1.firstObject integerValue];
     components.month = [@[@"",@"января",@"февраля",@"марта",@"апреля",@"мая",@"июня",@"июля",@"августа",@"сентября",@"октября",@"ноября",@"декабря"] indexOfObject:components2.lastObject];
-    components.hour = 9;
+    NSString *key = [[@(components.day) stringValue] stringByAppendingFormat:@"-%@", @(components.month)];
+    if (self.dict[key] == nil) {
+        self.dict[key] = [NSMutableArray new];
+    }
+    NSMutableArray *array = self.dict[key];
+    NSNumber *number = array.lastObject;
+    if (!number) {
+        number = @(8);
+    }
+    number = @((number.integerValue + 1));
+    [array addObject:number];
+    components.hour = number.integerValue;
     return [components date];
 }
 
