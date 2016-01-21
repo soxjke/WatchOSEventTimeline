@@ -10,11 +10,16 @@
 #import "CoreDataManager.h"
 #import "AFNetworking.h"
 #import <ClockKit/ClockKit.h>
+#import <WatchConnectivity/WatchConnectivity.h>
+#import "MMWormhole.h"
 
-@interface ExtensionDelegate ()
+@interface ExtensionDelegate () <WCSessionDelegate>
 
 @property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
 @property (nonatomic, assign) NSUInteger currentPage;
+@property (nonatomic, strong) WCSession *session;
+@property (nonatomic, strong) MMWormhole *wormhole;
+
 
 @end
 
@@ -26,6 +31,19 @@ NSString * const URLPattern = @"/store/connector/7400712a-7f34-4322-8184-e9e56be
 }
 
 - (void)applicationDidBecomeActive {
+    
+    if ([WCSession isSupported]) {
+        self.session = [WCSession defaultSession];
+        self.session.delegate = self;
+        [self.session activateSession];
+    }
+    
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.soxjke.WatchOSEventTimeline"
+                                                         optionalDirectory:@"wormhole"];
+    [self.wormhole listenForMessageWithIdentifier:@"group.com.soxjke.WatchOSEventTimeline" listener:^(id  _Nullable messageObject) {
+        NSLog(@"Wormhole %@", messageObject);
+    }];
+    
     self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://api.import.io"]];
     self.sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
     self.sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -48,6 +66,15 @@ NSString * const URLPattern = @"/store/connector/7400712a-7f34-4322-8184-e9e56be
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
     }];
+}
+
+- (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext {
+    
+}
+
+- (void)session:(WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message {
+    NSLog(@"WCSession %@", message);
+    [[CoreDataManager sharedInstance] parseAndStorePage:self.currentPage withObjects:message[@"results"]];
 }
 
 
