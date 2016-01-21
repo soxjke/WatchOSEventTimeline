@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Event.h"
 
 @interface CoreDataManager : NSObject
 
 + (instancetype)sharedInstance;
+- (NSArray<Event *> *)parseAndStorePage:(NSUInteger)page withObjects:(NSArray *)objects;
 
 @end

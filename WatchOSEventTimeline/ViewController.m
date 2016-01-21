@@ -7,8 +7,23 @@
 //
 
 #import "ViewController.h"
+#import "AFNetworking.h"
+#import "CoreDataManager.h"
+#import "EventTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-@interface ViewController ()
+NSString * const URLPattern = @"/store/connector/7400712a-7f34-4322-8184-e9e56be6d092/_query?input=webpage/url:http%%3A%%2F%%2Fdou.ua%%2Fcalendar%%2Fpage-%lu%%2F&&_apikey=7054e2e6c2bd4c2eb90e56164c635a9076eba370601cfec63bf4576e5ea8f3362885e9eb5b6ebb6e3b9a1b44886414e0fbf3a958debe2163c048b2862198f7976ccedeaa8fe256edd8f7bee146bfa97b";
+
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
+@property (nonatomic, assign) NSUInteger currentPage;
+@property (nonatomic, strong) NSArray *dataSource;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *previousButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -16,12 +31,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://api.import.io"]];
+    self.sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    self.sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.currentPage = 1;
+    [self loadDataForCurrentPage];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadDataForCurrentPage {
+    NSString *path = [NSString stringWithFormat:URLPattern, (unsigned long)self.currentPage];
+    __weak typeof(self) weakSelf = self;
+    [self.sessionManager GET:path parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        weakSelf.dataSource = [[CoreDataManager sharedInstance] parseAndStorePage:self.currentPage withObjects:responseObject[@"results"]];
+        [weakSelf updateNoLoad:YES];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+- (IBAction)previousButtonTapped:(id)sender {
+    self.currentPage--;
+    [self updateNoLoad:NO];
+}
+
+- (IBAction)nextButtonTapped:(id)sender {
+    self.currentPage++;
+    [self updateNoLoad:NO];
+}
+
+- (void)updateNoLoad:(BOOL)noLoad {
+    if (self.currentPage == 1) {
+        self.previousButton.enabled = NO;
+    }
+    else {
+        self.previousButton.enabled = YES;
+        if (self.dataSource.count < 20) {
+            self.nextButton.enabled = NO;
+        }
+        else {
+            self.nextButton.enabled = YES;
+        }
+    }
+    if (!noLoad) {
+        [self loadDataForCurrentPage];
+    }
+    [self.tableView reloadData];
+    self.titleLabel.text = [NSString stringWithFormat:@"Page %lu", self.currentPage];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([EventTableViewCell class]) forIndexPath:indexPath];
+    Event *event = [self.dataSource objectAtIndex:[indexPath row]];
+    cell.eventTitleLabel.text = event.title;
+    cell.eventVenueLabel.text = event.venue;
+    [cell.logoImageView setImageWithURL:[NSURL URLWithString:event.imageURL]];
+    return cell;
 }
 
 @end

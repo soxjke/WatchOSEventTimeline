@@ -11,6 +11,24 @@
 		00AC8DB11C50406E00F70BDC /* WatchOSEventTimeline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DAE1C50406E00F70BDC /* WatchOSEventTimeline.xcdatamodeld */; };
 		00AC8DB41C50424700F70BDC /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DB31C50424700F70BDC /* CoreDataManager.m */; };
 		00AC8DB51C50424700F70BDC /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DB31C50424700F70BDC /* CoreDataManager.m */; };
+		00AC8DCB1C504DB300F70BDC /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DB91C504DB300F70BDC /* AFHTTPRequestOperation.m */; };
+		00AC8DCC1C504DB300F70BDC /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DBB1C504DB300F70BDC /* AFHTTPRequestOperationManager.m */; };
+		00AC8DCD1C504DB300F70BDC /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DBD1C504DB300F70BDC /* AFHTTPSessionManager.m */; };
+		00AC8DCE1C504DB300F70BDC /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DC01C504DB300F70BDC /* AFNetworkReachabilityManager.m */; };
+		00AC8DCF1C504DB300F70BDC /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DC21C504DB300F70BDC /* AFSecurityPolicy.m */; };
+		00AC8DD01C504DB300F70BDC /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DC41C504DB300F70BDC /* AFURLConnectionOperation.m */; };
+		00AC8DD11C504DB300F70BDC /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DC61C504DB300F70BDC /* AFURLRequestSerialization.m */; };
+		00AC8DD21C504DB300F70BDC /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DC81C504DB300F70BDC /* AFURLResponseSerialization.m */; };
+		00AC8DD31C504DB300F70BDC /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DCA1C504DB300F70BDC /* AFURLSessionManager.m */; };
+		00AC8DD81C50524F00F70BDC /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DD51C50524F00F70BDC /* Event+CoreDataProperties.m */; };
+		00AC8DD91C50524F00F70BDC /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DD51C50524F00F70BDC /* Event+CoreDataProperties.m */; };
+		00AC8DDA1C50524F00F70BDC /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DD71C50524F00F70BDC /* Event.m */; };
+		00AC8DDB1C50524F00F70BDC /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DD71C50524F00F70BDC /* Event.m */; };
+		00AC8DDE1C505A0700F70BDC /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DDD1C505A0700F70BDC /* EventTableViewCell.m */; };
+		00AC8DE01C505BC700F70BDC /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AC8DDF1C505BC700F70BDC /* SDWebImage.framework */; };
+		00AC8DE21C505E1A00F70BDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AC8DE11C505E1A00F70BDC /* CoreGraphics.framework */; };
+		00AC8DE41C505E2700F70BDC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AC8DE31C505E2700F70BDC /* QuartzCore.framework */; };
+		00AC8DE71C505E8900F70BDC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AC8DE61C505E8900F70BDC /* ImageIO.framework */; };
 		00EDC0561C42B513002E704D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EDC0551C42B513002E704D /* main.m */; };
 		00EDC0591C42B513002E704D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EDC0581C42B513002E704D /* AppDelegate.m */; };
 		00EDC05C1C42B513002E704D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EDC05B1C42B513002E704D /* ViewController.m */; };
@@ -74,6 +92,35 @@
 		00AC8DAF1C50406E00F70BDC /* WatchOSEventTimeline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WatchOSEventTimeline.xcdatamodel; sourceTree = "<group>"; };
 		00AC8DB21C50424700F70BDC /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		00AC8DB31C50424700F70BDC /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		00AC8DB81C504DB300F70BDC /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		00AC8DB91C504DB300F70BDC /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		00AC8DBA1C504DB300F70BDC /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		00AC8DBB1C504DB300F70BDC /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		00AC8DBC1C504DB300F70BDC /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		00AC8DBD1C504DB300F70BDC /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		00AC8DBE1C504DB300F70BDC /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		00AC8DBF1C504DB300F70BDC /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		00AC8DC01C504DB300F70BDC /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		00AC8DC11C504DB300F70BDC /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		00AC8DC21C504DB300F70BDC /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		00AC8DC31C504DB300F70BDC /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		00AC8DC41C504DB300F70BDC /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		00AC8DC51C504DB300F70BDC /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		00AC8DC61C504DB300F70BDC /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		00AC8DC71C504DB300F70BDC /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		00AC8DC81C504DB300F70BDC /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		00AC8DC91C504DB300F70BDC /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		00AC8DCA1C504DB300F70BDC /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		00AC8DD41C50524F00F70BDC /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		00AC8DD51C50524F00F70BDC /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		00AC8DD61C50524F00F70BDC /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		00AC8DD71C50524F00F70BDC /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		00AC8DDC1C505A0700F70BDC /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		00AC8DDD1C505A0700F70BDC /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		00AC8DDF1C505BC700F70BDC /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		00AC8DE11C505E1A00F70BDC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		00AC8DE31C505E2700F70BDC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		00AC8DE61C505E8900F70BDC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		00EDC0511C42B513002E704D /* WatchOSEventTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchOSEventTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00EDC0551C42B513002E704D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00EDC0571C42B513002E704D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +157,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AC8DE71C505E8900F70BDC /* ImageIO.framework in Frameworks */,
+				00AC8DE41C505E2700F70BDC /* QuartzCore.framework in Frameworks */,
+				00AC8DE21C505E1A00F70BDC /* CoreGraphics.framework in Frameworks */,
+				00AC8DE01C505BC700F70BDC /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +174,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00AC8DB61C504DB300F70BDC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				00AC8DDF1C505BC700F70BDC /* SDWebImage.framework */,
+				00AC8DB71C504DB300F70BDC /* AFNetworking */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		00AC8DB71C504DB300F70BDC /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				00AC8DB81C504DB300F70BDC /* AFHTTPRequestOperation.h */,
+				00AC8DB91C504DB300F70BDC /* AFHTTPRequestOperation.m */,
+				00AC8DBA1C504DB300F70BDC /* AFHTTPRequestOperationManager.h */,
+				00AC8DBB1C504DB300F70BDC /* AFHTTPRequestOperationManager.m */,
+				00AC8DBC1C504DB300F70BDC /* AFHTTPSessionManager.h */,
+				00AC8DBD1C504DB300F70BDC /* AFHTTPSessionManager.m */,
+				00AC8DBE1C504DB300F70BDC /* AFNetworking.h */,
+				00AC8DBF1C504DB300F70BDC /* AFNetworkReachabilityManager.h */,
+				00AC8DC01C504DB300F70BDC /* AFNetworkReachabilityManager.m */,
+				00AC8DC11C504DB300F70BDC /* AFSecurityPolicy.h */,
+				00AC8DC21C504DB300F70BDC /* AFSecurityPolicy.m */,
+				00AC8DC31C504DB300F70BDC /* AFURLConnectionOperation.h */,
+				00AC8DC41C504DB300F70BDC /* AFURLConnectionOperation.m */,
+				00AC8DC51C504DB300F70BDC /* AFURLRequestSerialization.h */,
+				00AC8DC61C504DB300F70BDC /* AFURLRequestSerialization.m */,
+				00AC8DC71C504DB300F70BDC /* AFURLResponseSerialization.h */,
+				00AC8DC81C504DB300F70BDC /* AFURLResponseSerialization.m */,
+				00AC8DC91C504DB300F70BDC /* AFURLSessionManager.h */,
+				00AC8DCA1C504DB300F70BDC /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		00AC8DE51C505E3300F70BDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00AC8DE61C505E8900F70BDC /* ImageIO.framework */,
+				00AC8DE31C505E2700F70BDC /* QuartzCore.framework */,
+				00AC8DE11C505E1A00F70BDC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		00EDC0481C42B513002E704D = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +242,8 @@
 		00EDC0531C42B513002E704D /* WatchOSEventTimeline */ = {
 			isa = PBXGroup;
 			children = (
+				00AC8DE51C505E3300F70BDC /* Frameworks */,
+				00AC8DB61C504DB300F70BDC /* Vendor */,
 				00EDC09A1C42E3E0002E704D /* WatchOSEventTimeline.entitlements */,
 				00EDC0571C42B513002E704D /* AppDelegate.h */,
 				00EDC0581C42B513002E704D /* AppDelegate.m */,
@@ -153,6 +251,12 @@
 				00EDC05B1C42B513002E704D /* ViewController.m */,
 				00AC8DB21C50424700F70BDC /* CoreDataManager.h */,
 				00AC8DB31C50424700F70BDC /* CoreDataManager.m */,
+				00AC8DD41C50524F00F70BDC /* Event+CoreDataProperties.h */,
+				00AC8DD51C50524F00F70BDC /* Event+CoreDataProperties.m */,
+				00AC8DD61C50524F00F70BDC /* Event.h */,
+				00AC8DD71C50524F00F70BDC /* Event.m */,
+				00AC8DDC1C505A0700F70BDC /* EventTableViewCell.h */,
+				00AC8DDD1C505A0700F70BDC /* EventTableViewCell.m */,
 				00EDC05D1C42B513002E704D /* Main.storyboard */,
 				00EDC0601C42B513002E704D /* Assets.xcassets */,
 				00EDC0621C42B513002E704D /* LaunchScreen.storyboard */,
@@ -358,11 +462,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AC8DD01C504DB300F70BDC /* AFURLConnectionOperation.m in Sources */,
+				00AC8DDE1C505A0700F70BDC /* EventTableViewCell.m in Sources */,
+				00AC8DCB1C504DB300F70BDC /* AFHTTPRequestOperation.m in Sources */,
+				00AC8DCE1C504DB300F70BDC /* AFNetworkReachabilityManager.m in Sources */,
+				00AC8DD31C504DB300F70BDC /* AFURLSessionManager.m in Sources */,
+				00AC8DDA1C50524F00F70BDC /* Event.m in Sources */,
+				00AC8DD11C504DB300F70BDC /* AFURLRequestSerialization.m in Sources */,
 				00EDC05C1C42B513002E704D /* ViewController.m in Sources */,
+				00AC8DD21C504DB300F70BDC /* AFURLResponseSerialization.m in Sources */,
 				00AC8DB01C50406E00F70BDC /* WatchOSEventTimeline.xcdatamodeld in Sources */,
 				00AC8DB41C50424700F70BDC /* CoreDataManager.m in Sources */,
+				00AC8DCC1C504DB300F70BDC /* AFHTTPRequestOperationManager.m in Sources */,
+				00AC8DCF1C504DB300F70BDC /* AFSecurityPolicy.m in Sources */,
 				00EDC0591C42B513002E704D /* AppDelegate.m in Sources */,
 				00EDC0561C42B513002E704D /* main.m in Sources */,
+				00AC8DCD1C504DB300F70BDC /* AFHTTPSessionManager.m in Sources */,
+				00AC8DD81C50524F00F70BDC /* Event+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +489,8 @@
 				00AC8DB51C50424700F70BDC /* CoreDataManager.m in Sources */,
 				00EDC0831C42B514002E704D /* ExtensionDelegate.m in Sources */,
 				00AC8DB11C50406E00F70BDC /* WatchOSEventTimeline.xcdatamodeld in Sources */,
+				00AC8DD91C50524F00F70BDC /* Event+CoreDataProperties.m in Sources */,
+				00AC8DDB1C50524F00F70BDC /* Event.m in Sources */,
 				00EDC0891C42B514002E704D /* ComplicationController.m in Sources */,
 				00EDC0801C42B514002E704D /* InterfaceController.m in Sources */,
 				00EDC0861C42B514002E704D /* NotificationController.m in Sources */,
@@ -586,8 +704,13 @@
 				CODE_SIGN_ENTITLEMENTS = WatchOSEventTimeline/WatchOSEventTimeline.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WatchOSEventTimeline/Vendor",
+				);
 				INFOPLIST_FILE = WatchOSEventTimeline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -601,8 +724,13 @@
 				CODE_SIGN_ENTITLEMENTS = WatchOSEventTimeline/WatchOSEventTimeline.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WatchOSEventTimeline/Vendor",
+				);
 				INFOPLIST_FILE = WatchOSEventTimeline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
