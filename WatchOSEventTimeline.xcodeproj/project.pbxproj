@@ -32,6 +32,13 @@
 		00AC8DEF1C50B1F200F70BDC /* SAMHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DEA1C50B1F200F70BDC /* SAMHUDView.m */; };
 		00AC8DF01C50B1F200F70BDC /* SAMHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DEC1C50B1F200F70BDC /* SAMHUDWindow.m */; };
 		00AC8DF11C50B1F200F70BDC /* SAMHUDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC8DEE1C50B1F200F70BDC /* SAMHUDWindowViewController.m */; };
+		00C647931C50CBD700729D86 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C647921C50CBD700729D86 /* InterfaceController.m */; };
+		00C647961C50CBD700729D86 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C647951C50CBD700729D86 /* NotificationController.m */; };
+		00C647981C50CBD700729D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C647971C50CBD700729D86 /* Assets.xcassets */; };
+		00C6479D1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App.app in Resources */ = {isa = PBXBuildFile; fileRef = 00C6479C1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App.app */; };
+		00C647A31C50CBD800729D86 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C647A11C50CBD800729D86 /* Interface.storyboard */; };
+		00C647A51C50CBD800729D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C647A41C50CBD800729D86 /* Assets.xcassets */; };
+		00C647A91C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 00C6478D1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		00EDC0561C42B513002E704D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EDC0551C42B513002E704D /* main.m */; };
 		00EDC0591C42B513002E704D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EDC0581C42B513002E704D /* AppDelegate.m */; };
 		00EDC05C1C42B513002E704D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EDC05B1C42B513002E704D /* ViewController.m */; };
@@ -50,6 +57,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		00C6479E1C50CBD800729D86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00EDC0491C42B513002E704D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00C6479B1C50CBD800729D86;
+			remoteInfo = "WatchOSEventTimeline WatchKit 1 App";
+		};
+		00C647A71C50CBD800729D86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00EDC0491C42B513002E704D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00C6478C1C50CBD700729D86;
+			remoteInfo = "WatchOSEventTimeline WatchKit 1 Extension";
+		};
 		00EDC06A1C42B513002E704D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00EDC0491C42B513002E704D /* Project object */;
@@ -67,6 +88,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		00C647B01C50CBD800729D86 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				00C647A91C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00EDC0921C42B514002E704D /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +162,20 @@
 		00AC8DEC1C50B1F200F70BDC /* SAMHUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMHUDWindow.m; sourceTree = "<group>"; };
 		00AC8DED1C50B1F200F70BDC /* SAMHUDWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMHUDWindowViewController.h; sourceTree = "<group>"; };
 		00AC8DEE1C50B1F200F70BDC /* SAMHUDWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMHUDWindowViewController.m; sourceTree = "<group>"; };
+		00C6478D1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchOSEventTimeline WatchKit 1 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00C647901C50CBD700729D86 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		00C647911C50CBD700729D86 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		00C647921C50CBD700729D86 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		00C647941C50CBD700729D86 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		00C647951C50CBD700729D86 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		00C647971C50CBD700729D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00C647991C50CBD700729D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00C6479C1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOSEventTimeline WatchKit 1 App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00C647A21C50CBD800729D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		00C647A41C50CBD800729D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00C647A61C50CBD800729D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00C647B11C50CBEC00729D86 /* WatchOSEventTimeline WatchKit 1 Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchOSEventTimeline WatchKit 1 Extension.entitlements"; sourceTree = "<group>"; };
+		00C647B21C50CC2C00729D86 /* WatchOSEventTimeline WatchKit 1 App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchOSEventTimeline WatchKit 1 App.entitlements"; sourceTree = "<group>"; };
 		00EDC0511C42B513002E704D /* WatchOSEventTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchOSEventTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00EDC0551C42B513002E704D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00EDC0571C42B513002E704D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,6 +208,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		00C6478A1C50CBD700729D86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00EDC04E1C42B513002E704D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,12 +295,48 @@
 			path = SAMHUDView;
 			sourceTree = "<group>";
 		};
+		00C6478E1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension */ = {
+			isa = PBXGroup;
+			children = (
+				00C647B11C50CBEC00729D86 /* WatchOSEventTimeline WatchKit 1 Extension.entitlements */,
+				00C647911C50CBD700729D86 /* InterfaceController.h */,
+				00C647921C50CBD700729D86 /* InterfaceController.m */,
+				00C647941C50CBD700729D86 /* NotificationController.h */,
+				00C647951C50CBD700729D86 /* NotificationController.m */,
+				00C647971C50CBD700729D86 /* Assets.xcassets */,
+				00C647991C50CBD700729D86 /* Info.plist */,
+				00C6478F1C50CBD700729D86 /* Supporting Files */,
+			);
+			path = "WatchOSEventTimeline WatchKit 1 Extension";
+			sourceTree = "<group>";
+		};
+		00C6478F1C50CBD700729D86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00C647901C50CBD700729D86 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00C647A01C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App */ = {
+			isa = PBXGroup;
+			children = (
+				00C647B21C50CC2C00729D86 /* WatchOSEventTimeline WatchKit 1 App.entitlements */,
+				00C647A11C50CBD800729D86 /* Interface.storyboard */,
+				00C647A41C50CBD800729D86 /* Assets.xcassets */,
+				00C647A61C50CBD800729D86 /* Info.plist */,
+			);
+			path = "WatchOSEventTimeline WatchKit 1 App";
+			sourceTree = "<group>";
+		};
 		00EDC0481C42B513002E704D = {
 			isa = PBXGroup;
 			children = (
 				00EDC0531C42B513002E704D /* WatchOSEventTimeline */,
 				00EDC06C1C42B513002E704D /* WatchOSEventTimeline WatchKit App */,
 				00EDC07B1C42B514002E704D /* WatchOSEventTimeline WatchKit Extension */,
+				00C6478E1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension */,
+				00C647A01C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App */,
 				00EDC0521C42B513002E704D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -258,6 +347,8 @@
 				00EDC0511C42B513002E704D /* WatchOSEventTimeline.app */,
 				00EDC0681C42B513002E704D /* WatchOSEventTimeline WatchKit App.app */,
 				00EDC0771C42B514002E704D /* WatchOSEventTimeline WatchKit Extension.appex */,
+				00C6478D1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension.appex */,
+				00C6479C1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,6 +430,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		00C6478C1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00C647AD1C50CBD800729D86 /* Build configuration list for PBXNativeTarget "WatchOSEventTimeline WatchKit 1 Extension" */;
+			buildPhases = (
+				00C647891C50CBD700729D86 /* Sources */,
+				00C6478A1C50CBD700729D86 /* Frameworks */,
+				00C6478B1C50CBD700729D86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00C6479F1C50CBD800729D86 /* PBXTargetDependency */,
+			);
+			name = "WatchOSEventTimeline WatchKit 1 Extension";
+			productName = "WatchOSEventTimeline WatchKit 1 Extension";
+			productReference = 00C6478D1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		00C6479B1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00C647AA1C50CBD800729D86 /* Build configuration list for PBXNativeTarget "WatchOSEventTimeline WatchKit 1 App" */;
+			buildPhases = (
+				00C6479A1C50CBD800729D86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchOSEventTimeline WatchKit 1 App";
+			productName = "WatchOSEventTimeline WatchKit 1 App";
+			productReference = 00C6479C1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		00EDC0501C42B513002E704D /* WatchOSEventTimeline */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00EDC0971C42B514002E704D /* Build configuration list for PBXNativeTarget "WatchOSEventTimeline" */;
@@ -347,11 +471,13 @@
 				00EDC04E1C42B513002E704D /* Frameworks */,
 				00EDC04F1C42B513002E704D /* Resources */,
 				00EDC0961C42B514002E704D /* Embed Watch Content */,
+				00C647B01C50CBD800729D86 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				00EDC06B1C42B513002E704D /* PBXTargetDependency */,
+				00C647A81C50CBD800729D86 /* PBXTargetDependency */,
 			);
 			name = WatchOSEventTimeline;
 			productName = WatchOSEventTimeline;
@@ -401,6 +527,24 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Petro Korienev";
 				TargetAttributes = {
+					00C6478C1C50CBD700729D86 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = V385JVDTV9;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					00C6479B1C50CBD800729D86 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4AREF6UWN9;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					00EDC0501C42B513002E704D = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = V385JVDTV9;
@@ -446,11 +590,31 @@
 				00EDC0501C42B513002E704D /* WatchOSEventTimeline */,
 				00EDC0671C42B513002E704D /* WatchOSEventTimeline WatchKit App */,
 				00EDC0761C42B514002E704D /* WatchOSEventTimeline WatchKit Extension */,
+				00C6478C1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension */,
+				00C6479B1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00C6478B1C50CBD700729D86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C647981C50CBD700729D86 /* Assets.xcassets in Resources */,
+				00C6479D1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00C6479A1C50CBD800729D86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C647A51C50CBD800729D86 /* Assets.xcassets in Resources */,
+				00C647A31C50CBD800729D86 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00EDC04F1C42B513002E704D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -481,6 +645,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00C647891C50CBD700729D86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C647961C50CBD700729D86 /* NotificationController.m in Sources */,
+				00C647931C50CBD700729D86 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00EDC04D1C42B513002E704D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -526,6 +699,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		00C6479F1C50CBD800729D86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00C6479B1C50CBD800729D86 /* WatchOSEventTimeline WatchKit 1 App */;
+			targetProxy = 00C6479E1C50CBD800729D86 /* PBXContainerItemProxy */;
+		};
+		00C647A81C50CBD800729D86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00C6478C1C50CBD700729D86 /* WatchOSEventTimeline WatchKit 1 Extension */;
+			targetProxy = 00C647A71C50CBD800729D86 /* PBXContainerItemProxy */;
+		};
 		00EDC06B1C42B513002E704D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00EDC0671C42B513002E704D /* WatchOSEventTimeline WatchKit App */;
@@ -539,6 +722,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		00C647A11C50CBD800729D86 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00C647A21C50CBD800729D86 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		00EDC05D1C42B513002E704D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -566,6 +757,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		00C647AB1C50CBD800729D86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WatchOSEventTimeline WatchKit 1 App/WatchOSEventTimeline WatchKit 1 App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = WatchOSEventTimeline_WatchKit_1_Extension;
+				INFOPLIST_FILE = "WatchOSEventTimeline WatchKit 1 App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		00C647AC1C50CBD800729D86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WatchOSEventTimeline WatchKit 1 App/WatchOSEventTimeline WatchKit 1 App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = WatchOSEventTimeline_WatchKit_1_Extension;
+				INFOPLIST_FILE = "WatchOSEventTimeline WatchKit 1 App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		00C647AE1C50CBD800729D86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchOSEventTimeline WatchKit 1 Extension/WatchOSEventTimeline WatchKit 1 Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "WatchOSEventTimeline WatchKit 1 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		00C647AF1C50CBD800729D86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchOSEventTimeline WatchKit 1 Extension/WatchOSEventTimeline WatchKit 1 Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "WatchOSEventTimeline WatchKit 1 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		00EDC08D1C42B514002E704D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -654,6 +913,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WatchOSEventTimeline WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -661,7 +921,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -673,6 +933,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WatchOSEventTimeline WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
@@ -680,7 +941,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -694,13 +955,14 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = WatchOSEventTimeline_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchOSEventTimeline WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -713,13 +975,14 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = WatchOSEventTimeline_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchOSEventTimeline WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -735,6 +998,7 @@
 					"$(PROJECT_DIR)/WatchOSEventTimeline/Vendor",
 				);
 				INFOPLIST_FILE = WatchOSEventTimeline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline;
@@ -755,6 +1019,7 @@
 					"$(PROJECT_DIR)/WatchOSEventTimeline/Vendor",
 				);
 				INFOPLIST_FILE = WatchOSEventTimeline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soxjke.WatchOSEventTimeline;
@@ -766,6 +1031,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00C647AA1C50CBD800729D86 /* Build configuration list for PBXNativeTarget "WatchOSEventTimeline WatchKit 1 App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00C647AB1C50CBD800729D86 /* Debug */,
+				00C647AC1C50CBD800729D86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		00C647AD1C50CBD800729D86 /* Build configuration list for PBXNativeTarget "WatchOSEventTimeline WatchKit 1 Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00C647AE1C50CBD800729D86 /* Debug */,
+				00C647AF1C50CBD800729D86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		00EDC04C1C42B513002E704D /* Build configuration list for PBXProject "WatchOSEventTimeline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

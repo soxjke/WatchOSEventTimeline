@@ -14,5 +14,6 @@
 
 + (instancetype)sharedInstance;
 - (NSArray<Event *> *)parseAndStorePage:(NSUInteger)page withObjects:(NSArray *)objects;
+- (NSArray<Event *> *)fetchAll;
 
 @end

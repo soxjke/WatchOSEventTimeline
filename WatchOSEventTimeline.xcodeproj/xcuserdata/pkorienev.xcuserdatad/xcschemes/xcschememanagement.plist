@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>Notification - WatchOSEventTimeline WatchKit 1 App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Notification - WatchOSEventTimeline WatchKit App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>WatchOSEventTimeline WatchKit 1 App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>WatchOSEventTimeline WatchKit App.xcscheme</key>
 		<dict>
@@ -27,6 +37,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00C6479B1C50CBD800729D86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>00EDC0501C42B513002E704D</key>
 		<dict>
 			<key>primary</key>

@@ -12,7 +12,6 @@
 @implementation ExtensionDelegate
 
 - (void)applicationDidFinishLaunching {
-    [CoreDataManager sharedInstance];
 }
 
 - (void)applicationDidBecomeActive {

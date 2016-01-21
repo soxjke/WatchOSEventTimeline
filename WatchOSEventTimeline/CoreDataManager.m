@@ -63,7 +63,6 @@
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSURL *storeURL = [[self containerDirectoryURL] URLByAppendingPathComponent:@"WatchOSEventTimeline.sqlite"];
-    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
@@ -122,12 +121,16 @@ static NSEntityDescription *eventEntityDescription = nil;
     }
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:objects.count];
     for (NSDictionary *dataDict in objects) {
-        Event *event = [[Event alloc] initWithEntity:eventEntityDescription insertIntoManagedObjectContext:[self managedObjectContext]];
+        NSInteger eventId = [[[dataDict[@"title_link"] stringByReplacingOccurrencesOfString:@"/" withString:@""] stringByReplacingOccurrencesOfString:@"http:dou.uacalendar" withString:@""] integerValue];
+        Event *event = [self findById:eventId];
+        if (event == nil) {
+            event = [[Event alloc] initWithEntity:eventEntityDescription insertIntoManagedObjectContext:[self managedObjectContext]];
+        }
         event.title = dataDict[@"title_link/_text"];
         event.imageURL = dataDict[@"logo_image/_srcset"][@"2x"];
         event.eventDescription = dataDict[@"typo_description_1"];
         event.page = @(page);
-        event.eventId = @([[[dataDict[@"title_link"] stringByReplacingOccurrencesOfString:@"/" withString:@""] stringByReplacingOccurrencesOfString:@"http:dou.uacalendar" withString:@""] integerValue]);
+        event.eventId = @(eventId);
         event.venue = dataDict[@"whenandwhere_value"];
         event.date = [self parseDate:dataDict[@"date_value"]];
         [result addObject:event];
@@ -154,6 +157,21 @@ static NSEntityDescription *eventEntityDescription = nil;
     components.month = [@[@"",@"января",@"февраля",@"марта",@"апреля",@"мая",@"июня",@"июля",@"августа",@"сентября",@"октября",@"ноября",@"декабря"] indexOfObject:components2.lastObject];
     components.hour = 9;
     return [components date];
+}
+
+- (NSArray<Event *> *)fetchAll {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Event class])];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date"
+    ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+    return [[self managedObjectContext] executeFetchRequest:fetchRequest error:nil];
+}
+
+- (Event *)findById:(NSInteger)eventId {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Event class])];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"eventId = %li", (long)eventId],
+    fetchRequest.fetchLimit = 1;
+    return [[[self managedObjectContext] executeFetchRequest:fetchRequest error:nil] firstObject];
 }
 
 @end
