@@ -11,6 +11,7 @@
 #import "CoreDataManager.h"
 #import "EventTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "SAMHUDView.h"
 
 NSString * const URLPattern = @"/store/connector/7400712a-7f34-4322-8184-e9e56be6d092/_query?input=webpage/url:http%%3A%%2F%%2Fdou.ua%%2Fcalendar%%2Fpage-%lu%%2F&&_apikey=7054e2e6c2bd4c2eb90e56164c635a9076eba370601cfec63bf4576e5ea8f3362885e9eb5b6ebb6e3b9a1b44886414e0fbf3a958debe2163c048b2862198f7976ccedeaa8fe256edd8f7bee146bfa97b";
 
@@ -24,6 +25,8 @@ NSString * const URLPattern = @"/store/connector/7400712a-7f34-4322-8184-e9e56be
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (nonatomic, strong) SAMHUDView *hud;
 
 @end
 
@@ -42,11 +45,14 @@ NSString * const URLPattern = @"/store/connector/7400712a-7f34-4322-8184-e9e56be
 - (void)loadDataForCurrentPage {
     NSString *path = [NSString stringWithFormat:URLPattern, (unsigned long)self.currentPage];
     __weak typeof(self) weakSelf = self;
+    self.hud = [[SAMHUDView alloc] initWithTitle:@"Loading" loading:YES];    
+    [self.hud show];
     [self.sessionManager GET:path parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         weakSelf.dataSource = [[CoreDataManager sharedInstance] parseAndStorePage:self.currentPage withObjects:responseObject[@"results"]];
         [weakSelf updateNoLoad:YES];
+        [weakSelf.hud completeAndDismissWithTitle:@"Success"];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [weakSelf.hud failAndDismissWithTitle:@"Failed"];
     }];
 }
 
@@ -85,11 +91,18 @@ NSString * const URLPattern = @"/store/connector/7400712a-7f34-4322-8184-e9e56be
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSDateFormatter *formatter = nil;
+    if (formatter == nil) {
+        formatter = [NSDateFormatter new];
+        formatter.locale = [NSLocale currentLocale];
+        formatter.dateFormat = @"dd/MM/YYY";
+    }
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([EventTableViewCell class]) forIndexPath:indexPath];
     Event *event = [self.dataSource objectAtIndex:[indexPath row]];
     cell.eventTitleLabel.text = event.title;
-    cell.eventVenueLabel.text = event.venue;
-    [cell.logoImageView setImageWithURL:[NSURL URLWithString:event.imageURL]];
+    cell.eventVenueLabel.text = [NSString stringWithFormat:@"%@ - %@", [formatter stringFromDate:event.date], event.venue];
+    [cell.logoImageView setImageWithURL:[NSURL URLWithString:event.imageURL]
+                       placeholderImage:[UIImage imageNamed:@"question-mark-grey"]];
     return cell;
 }
 

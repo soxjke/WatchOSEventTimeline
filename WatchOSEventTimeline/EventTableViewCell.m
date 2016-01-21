@@ -14,4 +14,12 @@
 
 @implementation EventTableViewCell
 
+- (void)awakeFromNib {
+    self.logoImageView.image = [UIImage imageNamed:@"question-mark-grey"];    
+}
+
+- (void)prepareForReuse {
+    self.logoImageView.image = [UIImage imageNamed:@"question-mark-grey"];
+}
+
 @end

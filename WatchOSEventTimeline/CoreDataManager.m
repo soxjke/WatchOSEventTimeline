@@ -129,11 +129,31 @@ static NSEntityDescription *eventEntityDescription = nil;
         event.page = @(page);
         event.eventId = @([[[dataDict[@"title_link"] stringByReplacingOccurrencesOfString:@"/" withString:@""] stringByReplacingOccurrencesOfString:@"http:dou.uacalendar" withString:@""] integerValue]);
         event.venue = dataDict[@"whenandwhere_value"];
-        event.date = [NSDate date];
+        event.date = [self parseDate:dataDict[@"date_value"]];
         [result addObject:event];
     }
     [self saveContext];
     return [NSArray arrayWithArray:result];
+}
+
+- (NSDate *)parseDate:(NSString *)stringDate {
+    NSArray *components1 = [stringDate componentsSeparatedByString:@"—"];
+    NSArray *components2 = nil;
+    NSString *processedString = stringDate;
+    if (components1.count != 1) {
+        components2 = [components1.lastObject componentsSeparatedByString:@" "];
+        processedString = [@[components1.firstObject, components2.lastObject] componentsJoinedByString:@" "];
+    }
+    else {
+        components2 = [stringDate componentsSeparatedByString:@" "];
+    }
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.calendar = [NSCalendar currentCalendar];
+    components.year = 2016;
+    components.day = [components1.firstObject integerValue];
+    components.month = [@[@"",@"января",@"февраля",@"марта",@"апреля",@"мая",@"июня",@"июля",@"августа",@"сентября",@"октября",@"ноября",@"декабря"] indexOfObject:components2.lastObject];
+    components.hour = 9;
+    return [components date];
 }
 
 @end
